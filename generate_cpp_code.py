@@ -30,12 +30,10 @@ def get_single_booster_cpp_code(booster_tree, branch_id, class_index, indentatio
 
 def generate_single_booster_cpp_code(booster, class_index):
     booster_tree = dict()
-    first_line = None
     for line in booster:
         branch_id = int(line.split(':')[0].strip())
         booster_tree[branch_id] = line
         
-    # print("Printing single booster cpp code.")        
     return get_single_booster_cpp_code(booster_tree, 0, class_index, 1)
 
 if __name__ == '__main__':
