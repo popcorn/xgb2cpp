@@ -2,7 +2,7 @@
 xgb2cpp converts XGBoost raw text dump to C++ code that you can use in your C++ projects.
 
 #### READ FIRST
-**This code (atm) only works on XGB models trained with 'multi:softprob' objective.** If you want it to work with 'binary:logistic' or 'binary:logitraw' you'll have to tweak code-generating Python script a bit or wait for me to implement it. 
+**This code (atm) only works on XGB models trained with 'multi:softprob' objective.** 'multi:softprob' objective tells XGBoost to train trees in "1 vs. all" fashion. If you want it to work with 'binary:logistic' or 'binary:logitraw' you'll have to tweak code-generating Python script a bit or wait for me to implement it. 
 
 #### How to run it?
 Use *generate_cpp_code.py* script to generate *xgboost_classifier.cpp*. Generated *xgboost_classifier.cpp* will contain *xgb_classify()* function that you can use to classify samples. In folder *sample* you can find *main.cpp* and *xgboost_classifier.h* files that form use case project. 
